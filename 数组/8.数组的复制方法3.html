@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // push() - 向数组末尾添加元素
+let fruits = ['apple', 'banana'];
+console.log('push() 示例:');
+console.log('原数组:', fruits);
+let newLength = fruits.push('orange', 'grape');
+console.log('添加后:', fruits);
+console.log('新长度:', newLength);
+console.log('---');
+
+// pop() - 删除并返回最后一个元素
+fruits = ['apple', 'banana', 'orange'];
+console.log('pop() 示例:');
+console.log('原数组:', fruits);
+let lastFruit = fruits.pop();
+console.log('删除后:', fruits);
+console.log('被删除的元素:', lastFruit);
+console.log('---');
+
+// unshift() - 向数组开头添加元素
+fruits = ['banana', 'orange'];
+console.log('unshift() 示例:');
+console.log('原数组:', fruits);
+newLength = fruits.unshift('apple');
+console.log('添加后:', fruits);
+console.log('新长度:', newLength);
+console.log('---');
+
+// shift() - 删除并返回第一个元素
+fruits = ['apple', 'banana', 'orange'];
+console.log('shift() 示例:');
+console.log('原数组:', fruits);
+let firstFruit = fruits.shift();
+console.log('删除后:', fruits);
+console.log('被删除的元素:', firstFruit);
+console.log('---');
+
+// splice() - 删除元素
+fruits = ['apple', 'banana', 'orange', 'grape'];
+console.log('splice() 删除示例:');
+console.log('原数组:', fruits);
+let removed = fruits.splice(1, 2); // 从索引1开始删除2个元素
+console.log('删除后:', fruits);
+console.log('被删除的元素:', removed);
+console.log('---');
+
+// splice() - 插入元素
+fruits = ['apple', 'grape'];
+console.log('splice() 插入示例:');
+console.log('原数组:', fruits);
+fruits.splice(1, 0, 'banana', 'orange'); // 从索引1开始，删除0个，插入2个元素
+console.log('插入后:', fruits);
+console.log('---');
+
+// splice() - 替换元素
+fruits = ['apple', 'banana', 'cherry'];
+console.log('splice() 替换示例:');
+console.log('原数组:', fruits);
+removed = fruits.splice(1, 1, 'orange'); // 从索引1开始，删除1个，插入1个元素
+console.log('替换后:', fruits);
+console.log('被替换的元素:', removed);
+console.log('---');
+
+// reverse() - 反转数组
+fruits = ['apple', 'banana', 'orange'];
+console.log('reverse() 示例:');
+console.log('原数组:', fruits);
+fruits.reverse();
+console.log('反转后:', fruits);
+  </script>
+</body>
+</html>
