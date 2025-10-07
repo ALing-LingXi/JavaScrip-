@@ -27,7 +27,7 @@
     6.转义字符 \
     用于匹配特殊字符本身（如.、[等）。
       7.预定义字符集
-      \w：任意单词字符，等同于[A-Za-z0-9_]
+      \w：任意单词字符，等同于[A-Za-z-0-9_]
       \W：非单词字符，等同于[^ A-Za - z0 -9_]
       \d：任意数字，等同于[0 - 9]
       \D：非数字，等同于[^ 0 - 9]
@@ -35,6 +35,27 @@
       \S：非空白字符
       \b：单词边界
       \B：非单词边界 */
+      let str1 = "abc"
+      let reg = RegExp('abc')
+      const result = reg.test(str1)
+      console.log(result);
+      reg = RegExp('abc|bcd')
+      str1 = 'bcdaASDd-'//必须是abc或bcd
+      console.log(reg.test(str1));
+      reg = RegExp('[^(a-zA-Z)]')
+      console.log(reg.test(str1));
+      str1 = 'abckkAAA'
+      reg = /[^a-z]/i  //匹配模式i忽略大小写
+      console.log(reg.test(str1));
+      reg = /./ //匹配换行外的任意字符
+      str1 = '\n'
+      console.log(reg.test(str1));
+      reg = /^a$/
+      str1 = 'abc'
+      console.log(reg.test(str1));
+      str1 = 'a'
+      console.log(reg.test(str1));
+      
   </script>
 </body>
 
