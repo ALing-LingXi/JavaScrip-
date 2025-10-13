@@ -21,7 +21,7 @@
     //绑定到document我们就可以省事很多
     const links = document.getElementsByTagName('a')
     document.addEventListener('click',event=>{
-      event.preventDefault()
+      event.preventDefault()//取消默认行为
       if([...links].includes(event.target))
      alert(event.target.innerText);
     })
