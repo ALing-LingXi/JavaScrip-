@@ -1,9 +1,18 @@
-const n1 = readline()
-let num1 = 0
-for(let i =0 ;i<n1.length-2;i++){
-   if(n1[i]!==n[i+1]){
-    if(n1[i+1]==n1[i+2]){
-      num1++
-    }
-   }
+class Book {
+  constructor(author) {
+    this._author = author;
+  }
+  // getter
+  get writer() {
+    return this._author;
+  }
+  // setter
+  set writer(updatedAuthor) {
+    this._author = updatedAuthor;
+  }
 }
+const novel = new Book('anonymous');
+console.log(novel.writer);
+novel.writer = 'newAuthor';
+console.log(novel.writer);
+console.log(novel._author);
